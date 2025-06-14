@@ -1,14 +1,5 @@
 <script>
-import globalConfigMixin from 'shared/mixins/globalConfigMixin';
-
-const {
-  LOGO_THUMBNAIL: logoThumbnail,
-  BRAND_NAME: brandName,
-  WIDGET_BRAND_URL: widgetBrandURL,
-} = window.globalConfig || {};
-
 export default {
-  mixins: [globalConfigMixin],
   props: {
     disableBranding: {
       type: Boolean,
@@ -18,24 +9,24 @@ export default {
   data() {
     return {
       globalConfig: {
-        brandName,
-        logoThumbnail,
-        widgetBrandURL,
+        brandName: 'Webmaster Solutions',
+        logoThumbnail: 'https://webmaster.solutions/logo-icon.png', // replace with your actual logo URL
+        widgetBrandURL: 'https://webmaster.solutions',
       },
     };
   },
-   computed: {
-  brandRedirectURL() {
-    try {
-      const referrerHost = this.$store.getters['appConfig/getReferrerHost'];
-      const baseURL = `https://webmaster.solutions?utm_source=${
-        referrerHost ? 'widget_branding' : 'survey_branding'
-      }`;
-      return baseURL;
-    } catch (e) {
-      return '';
-    }
-  },
+  computed: {
+    brandRedirectURL() {
+      try {
+        const referrerHost = this.$store?.getters['appConfig/getReferrerHost'];
+        const baseURL = `https://webmaster.solutions?utm_source=${
+          referrerHost ? 'widget_branding' : 'survey_branding'
+        }`;
+        return baseURL;
+      } catch (e) {
+        return 'https://webmaster.solutions';
+      }
+    },
   },
 };
 </script>
@@ -57,7 +48,7 @@ export default {
         :src="globalConfig.logoThumbnail"
       />
       <span>
-        {{ useInstallationName($t('POWERED_BY'), globalConfig.brandName) }}
+        Powered by {{ globalConfig.brandName }}
       </span>
     </a>
   </div>
