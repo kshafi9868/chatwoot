@@ -9,9 +9,9 @@ export default {
   data() {
     return {
       globalConfig: {
-        brandName: 'Webmaster Solutions',
-        logoThumbnail: 'https://webmaster.solutions/logo-icon.png', // replace with your actual logo URL
-        widgetBrandURL: 'https://webmaster.solutions',
+        brandName: 'AVR Expos',
+        logoThumbnail: 'https://avrexpos.com/logo-icon.png', // replace with your actual logo URL
+        widgetBrandURL: 'https://avrexpos.com',
       },
     };
   },
@@ -24,7 +24,7 @@ export default {
         }`;
         return baseURL;
       } catch (e) {
-        return 'https://webmaster.solutions';
+        return 'https://avrexpos.com';
       }
     },
   },
@@ -48,7 +48,7 @@ export default {
         :src="globalConfig.logoThumbnail"
       />
       <span>
-        Powered by {{ globalConfig.brandName }}
+        {{ globalConfig.brandName }}
       </span>
     </a>
   </div>
