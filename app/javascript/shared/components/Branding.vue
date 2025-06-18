@@ -19,9 +19,7 @@ export default {
     brandRedirectURL() {
       try {
         const referrerHost = this.$store?.getters['appConfig/getReferrerHost'];
-        const baseURL = `https://avrexpos.com?utm_source=${
-          referrerHost ? 'widget_branding' : 'survey_branding'
-        }`;
+        const baseURL = `https://avrexpos.com`;
         return baseURL;
       } catch (e) {
         return 'https://avrexpos.com';
