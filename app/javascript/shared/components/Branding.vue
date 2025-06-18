@@ -3,14 +3,14 @@ export default {
   props: {
     disableBranding: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   data() {
     return {
       globalConfig: {
         brandName: 'AVR Expos',
-        logoThumbnail: 'https://avrexpos.com/logo-icon.png', // replace with your actual logo URL
+        //logoThumbnail: 'https://avrexpos.com/logo-icon.png', // replace with your actual logo URL
         widgetBrandURL: 'https://avrexpos.com',
       },
     };
@@ -19,7 +19,7 @@ export default {
     brandRedirectURL() {
       try {
         const referrerHost = this.$store?.getters['appConfig/getReferrerHost'];
-        const baseURL = `https://webmaster.solutions?utm_source=${
+        const baseURL = `https://avrexpos.com?utm_source=${
           referrerHost ? 'widget_branding' : 'survey_branding'
         }`;
         return baseURL;
