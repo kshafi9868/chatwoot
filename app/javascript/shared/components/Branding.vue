@@ -10,7 +10,7 @@ export default {
     return {
       globalConfig: {
         brandName: 'WebSol',
-        //logoThumbnail: 'https://avrexpos.com/logo-icon.png', // replace with your actual logo URL
+        //logoThumbnail: 'https://webmaster.solutions/logo-icon.png', // replace with your actual logo URL
         widgetBrandURL: 'https://webmaster.solutions',
       },
     };
