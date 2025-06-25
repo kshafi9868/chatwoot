@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       globalConfig: {
-        brandName: 'AVR Expos llc',
+        brandName: 'AVR Expos LLC',
         //logoThumbnail: 'https://webmaster.solutions/logo-icon.png', // replace with your actual logo URL
         widgetBrandURL: 'https://avrexpos.com',
       },
