@@ -9,9 +9,9 @@ export default {
   data() {
     return {
       globalConfig: {
-        brandName: 'WebSol',
+        brandName: 'AVR Expos llc',
         //logoThumbnail: 'https://webmaster.solutions/logo-icon.png', // replace with your actual logo URL
-        widgetBrandURL: 'https://webmaster.solutions',
+        widgetBrandURL: 'https://avrexpos.com',
       },
     };
   },
@@ -19,10 +19,10 @@ export default {
     brandRedirectURL() {
       try {
         const referrerHost = this.$store?.getters['appConfig/getReferrerHost'];
-        const baseURL = `https://webmaster.solutions`;
+        const baseURL = `https://avrexpos.com`;
         return baseURL;
       } catch (e) {
-        return 'https://webmaster.solutions';
+        return 'https://avrexpos.com';
       }
     },
   },
@@ -42,7 +42,7 @@ export default {
     >
       
       <span>
-        Powered by {{ globalConfig.brandName }}
+        {{ globalConfig.brandName }}
       </span>
     </a>
   </div>
